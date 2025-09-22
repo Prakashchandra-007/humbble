@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import { AntDesign, Ionicons, Octicons } from "@expo/vector-icons";
 import Avatar from "@/components/Avatar";
 import Button from "@/components/Button";
+import { useRouter } from "expo-router";
 
 const PLANS = [
   { plan: "Get exclusive photo insights", p1: true, p2: true },
@@ -27,6 +28,7 @@ const profile = () => {
   const headerbutton = () => (
     <AntDesign name="setting" size={24} color="black" />
   );
+  const router = useRouter();
   return (
     <ScrollView style={{ paddingHorizontal: 8 }}>
       <View style={{ gap: 10 }}>
@@ -41,6 +43,7 @@ const profile = () => {
             <Button
               style={{ backgroundColor: "#ebebeb" }}
               textStyle={{ color: "#1c1c1c" }}
+              onPress={() => router.replace("/auth/signin")}
             >
               Complete profile
             </Button>
@@ -65,7 +68,7 @@ const profile = () => {
               <AntDesign name="star" size={24} color="black" />
             </View>
             <View style={{ flexDirection: "column" }}>
-              <Text style={{ fontWeight: "800" }}>Spotlight</Text>
+              <Text style={{ fontWeight: "800", color: "white" }}>Spotlight</Text>
               <Text>Stand out</Text>
             </View>
           </View>
@@ -85,7 +88,7 @@ const profile = () => {
               <AntDesign name="star" size={24} color="black" />
             </View>
             <View style={{ flexDirection: "column" }}>
-              <Text style={{ fontWeight: "800" }}>Spotlight</Text>
+              <Text style={{ fontWeight: "800", color: "white" }}>Spotlight</Text>
               <Text>Stand out</Text>
             </View>
           </View>
@@ -114,6 +117,8 @@ const profile = () => {
             <Button
               style={{ backgroundColor: "#1c1c1c" }}
               textStyle={{ color: "#ebebeb" }}
+              onPress={() => router.replace("/auth/signin")}
+
             >
               Complete profile
             </Button>
@@ -140,6 +145,7 @@ const profile = () => {
             <Button
               style={{ backgroundColor: "#1c1c1c" }}
               textStyle={{ color: "#ebebeb" }}
+              onPress={() => router.replace("/auth/signin")}
             >
               Complete profile
             </Button>
@@ -156,7 +162,7 @@ const profile = () => {
           {PLANS.map((planitem) => {
             return (
               <View style={styles.tableItem} key={planitem.plan}>
-                <Text style={[styles.row1, { fontWeight: "300" }]}>
+                <Text style={[styles.row1, { fontWeight: "300", color:"white" }]}>
                   {planitem.plan}
                 </Text>
                 <Ionicons
@@ -202,7 +208,7 @@ export default profile;
 const styles = StyleSheet.create({
   tableItem: {
     flexDirection: "row",
-
+    paddingHorizontal: 5,
     borderBottomWidth: 2,
     paddingVertical: 5,
     borderStyle: "solid",

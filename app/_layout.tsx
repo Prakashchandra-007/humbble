@@ -38,6 +38,8 @@ export default function RootLayout() {
           name="(tabs)"
           options={{ headerShown: false, title: "chats" }}
         />
+        <Stack.Screen name="auth/signin" options={{ headerShown: false }} />
+        <Stack.Screen name="auth/signup" options={{ headerShown: false }} />
         <Stack.Screen name="charscreenf" options={{ headerShown: true }} />
         <Stack.Screen name="+not-found" />
       </Stack>

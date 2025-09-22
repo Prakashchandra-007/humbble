@@ -22,11 +22,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingVertical: 8,
     marginBottom: 6,
+
   },
   logo: {
+    color: "white",
     fontSize: 24,
     fontWeight: "bold",
     letterSpacing: 1,
-    color: "#1a1a1a",
   },
 });
